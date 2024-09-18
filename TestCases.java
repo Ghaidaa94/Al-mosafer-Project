@@ -17,7 +17,7 @@ public class TestCases {
     String WebURL = "https://www.almosafer.com/en";
     Random random = new Random();
     int SwitchLanguage = random.nextInt(4); // Random Number between (0-4)
-    int RandomRoom = random.nextInt(3);
+    int RandomRoom = random.nextInt(3); // Random Number between (0-3)
     JavascriptExecutor Scroll = (JavascriptExecutor) driver;
 
     @Test(priority = 1,description = "Requirement 1 & 2")
@@ -104,8 +104,7 @@ public class TestCases {
 
     @Test (priority = 6, description = "Requirement 8")
     public void AddingAssertion (){
-//        driver.navigate().to(WebURL);
-//        driver.findElement(By.cssSelector("[class=\"sc-jTzLTM hQpNle cta__button cta__saudi btn btn-primary\"]")).click();
+
 String [] Element = {"//h4[normalize-space()='Car rental']",
                      "//h4[normalize-space()='Domestic packages']",
                      "//h4[normalize-space()='Cruise packages']",
@@ -121,9 +120,8 @@ String [] Element = {"//h4[normalize-space()='Car rental']",
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
             driver.navigate().back();
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-//            System.out.println(Action.getText()+ ": is Active");
         }
-//         Assert for checking boxes in trip
+
         WebElement CheckBox = driver.findElement(By.cssSelector("[for=\"fare-calendar-checkbox\"]"));
         Assert.assertFalse(CheckBox.isSelected());
         Assert.assertFalse(driver.findElement(By.cssSelector("[for=\"direct-flights-only-checkbox\"]")).isSelected());
@@ -248,7 +246,7 @@ String [] Element = {"//h4[normalize-space()='Car rental']",
         System.out.println("Requirement 18 & 19:");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.findElement(By.cssSelector("[data-testid=\"HotelSearchResult__sort__LOWEST_PRICE\"]")).click();
-        WebElement FirstOffer = driver.findElement(By.cssSelector("[data-testid=\"HotelSearchResult__Hotel0__PriceLabel\"]")); // Scroll Down
+        WebElement FirstOffer = driver.findElement(By.cssSelector("[data-testid=\"HotelSearchResult__Hotel0__PriceLabel\"]"));
         Thread.sleep(2000);
         Scroll.executeScript("window.scrollTo(0, document.body.scrollHeight);");
         WebElement HighestOffer = driver.findElement(By.cssSelector("[data-testid=\"HotelSearchResult__Hotel39__PriceLabel\"]"));
