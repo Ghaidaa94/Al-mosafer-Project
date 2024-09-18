@@ -23,4 +23,4 @@ Please do the following:
 16.	Open new page (which is "search result page")
 17.	wait for the loading full completed and do some assertion 
 18.	Apply sorting option by "Lowest price " 
-19.	Based on the results on the first page, do assertions if the results are sorted from the lowest to 	highest price
+19.	Based on the results on the first page, do assertions if the results are sorted from the lowest to highest price
