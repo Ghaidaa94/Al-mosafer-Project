@@ -1,0 +1,26 @@
+Automation Final Project 
+
+Please do the following: 
+1.	Please automate the below: 
+	Navigate to URL :  https://www.almosafer.com/en
+	Once the website is loaded make the below assertions: 
+2.	Defaults language is "EN"
+3.	Defaults Currency is "SAR"
+4.	Verify "qitaf" logo is displayed in footer 
+5.	Hotel search tab is NOT selected by default 
+6.	Flight departure date is set to "today +1day" by defaults 
+7.	Flight return date is set to "today+2days" by defaults
+8.	make any other assertions that you want to do 
+9.	Use random method to change the language (sometimes AR, sometimes to EN) 
+10.	make assertion that the language is updated as you chose
+11.	Switch to hotel search tab
+12.	In location field type value,  
+	if the current language is EN, then randomly type from (Select (1) 
+	If the current language is AR, then randomly type from (دبي - جده  )
+13.	Click on first result from autocompleted list 
+14.	Randomly select "1 room, 2adults, 0 children" or "1 room, 1 adult ,0 children" option 
+15.	Click on search hotel button 
+16.	Open new page (which is "search result page")
+17.	wait for the loading full completed and do some assertion 
+18.	Apply sorting option by "Lowest price " 
+19.	Based on the results on the first page, do assertions if the results are sorted from the lowest to 	highest price
